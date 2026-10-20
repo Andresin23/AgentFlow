@@ -1,0 +1,214 @@
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6fb;
+  color: #20243a;
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+
+.app {
+  width: min(100% - 32px, 900px);
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.marca {
+  color: #6558d3;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: clamp(32px, 5vw, 46px);
+}
+
+.subtitulo {
+  color: #73788c;
+}
+
+.resumen,
+.panel {
+  background: white;
+  border: 1px solid #e6e8f0;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.resumen {
+  min-width: 155px;
+  display: grid;
+  gap: 10px;
+  color: #73788c;
+}
+
+.resumen strong {
+  color: #6558d3;
+  font-size: 36px;
+}
+
+.panel {
+  margin-bottom: 24px;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.formulario,
+.formulario label {
+  display: grid;
+  gap: 10px;
+}
+
+.formulario {
+  gap: 20px;
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+input,
+select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #dfe2ed;
+  border-radius: 9px;
+  font: inherit;
+  background: white;
+}
+
+button {
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 16px;
+  background: #6558d3;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.88;
+}
+
+.titulo-lista,
+.tarea,
+.acciones {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.titulo-lista span,
+.tarea p {
+  color: #73788c;
+  font-size: 14px;
+}
+
+.tarea {
+  padding: 18px 0;
+  border-top: 1px solid #eceef4;
+}
+
+.tarea h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.tarea p {
+  margin: 0 0 8px;
+}
+
+.estado {
+  color: #8b6715;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.estado.completada {
+  color: #168354;
+}
+
+.acciones button {
+  white-space: nowrap;
+}
+
+.secundario {
+  background: #eceaff;
+  color: #5144ba;
+}
+
+.eliminar {
+  background: #fff0f0;
+  color: #bd3434;
+}
+
+.error {
+  padding: 14px;
+  border-radius: 10px;
+  background: #fff0f0;
+  color: #bd3434;
+}
+
+footer {
+  padding: 16px;
+  text-align: center;
+  color: #8b8fa1;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .encabezado {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .campos {
+    grid-template-columns: 1fr;
+  }
+
+  .tarea {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .acciones {
+    flex-wrap: wrap;
+  }
+}
+.mensaje-estimacion {
+  margin: 0;
+  color: #5144ba;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
